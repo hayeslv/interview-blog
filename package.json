@@ -3,14 +3,37 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog-zh"
+    }
+  },
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "lint": "eslint .",
+    "commit": "git add . && git cz",
+    "prepare": "npx husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "eslintConfig": {
+    "extends": [
+      "@hayeslv"
+    ],
+    "ignorePatterns": [],
+    "rules": {}
+  },
   "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@hayeslv/eslint-config": "^0.1.9",
+    "commitizen": "^4.2.5",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-conventional-changelog-zh": "^0.0.2",
+    "eslint": "^8.28.0",
+    "husky": "^8.0.2",
     "vuepress": "^1.9.7"
   }
 }
