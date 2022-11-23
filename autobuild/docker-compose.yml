@@ -5,6 +5,7 @@ services:
     image: nginx
     ports:
       - 81:81
+      - 7777:7777
     volumes:
       - ./conf.d/:/etc/nginx/conf.d
       - /root/project/interview-blog/docs/.vuepress/dist:/usr/share/nginx/blog/
