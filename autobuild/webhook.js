@@ -14,16 +14,28 @@ function run_cmd(cmd, args, callback) {
 }
 
 http.createServer(function(req, res) {
-  console.log("===========进来了===========")
   handler(req, res, function(err) {
     res.statusCode = 404;
     res.end('no such location');
   });
 }).listen(7777); // 启动服务的端口，需要开放安全组
 
+handler.on('error', function(err) {
+  console.error('Error:', err.message)
+})
+
 handler.on('push', function(event) {
   console.log('Received a push event for %s to %s',
     event.payload.repository.name,
     event.payload.ref);
-  run_cmd('sh', ['./webhook.sh', event.payload.repository.name], function(text) { console.log(text); });
+  run_cmd('sh', ['./webhook.sh'], function(text) { console.log(text); });
+  // run_cmd('sh', ['./webhook.sh', event.payload.repository.name], function(text) { console.log(text); });
 });
+
+handler.on('issues', function (event) {
+  console.log('Received an issue event for %s action=%s: #%d %s',
+    event.payload.repository.name,
+    event.payload.action,
+    event.payload.issue.number,
+    event.payload.issue.title);
+})
