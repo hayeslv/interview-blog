@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+  nginx:
+    restart: always
+    image: nginx
+    ports:
+      - 81:81
+    volumes:
+      - ./conf.d/:/etc/nginx/conf.d
+      - /root/project/interview-blog/docs/.vuepress/dist:/usr/share/nginx/blog/

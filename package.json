@@ -22,7 +22,9 @@
     "extends": [
       "@hayeslv"
     ],
-    "ignorePatterns": [],
+    "ignorePatterns": [
+      "autobuild/*"
+    ],
     "rules": {}
   },
   "devDependencies": {
