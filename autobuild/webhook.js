@@ -1,6 +1,6 @@
 const http = require('http');
 // github-webhook-handler 的绝对路径
-const createHandler = require('/root/tool/nodejs/node-v14.20.1-linux-x64/lib/node_modules/github-webhook-handler');
+const createHandler = require('github-webhook-handler');
 // secret 保持和 GitHub 后台设置保持一致
 const handler = createHandler({ path: '/', secret: 'dylanlv2022' });
 
