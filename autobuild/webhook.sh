@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "=======开始======="
 WEB_PATH='/root/project/interview-blog'
 DOCKER_COMPOSE_PATH='/root/project/interview-blog/autobuild'
 

@@ -1,13 +1,13 @@
-const http = require('http');
+var http = require('http');
 // github-webhook-handler 的绝对路径
-const createHandler = require('github-webhook-handler');
+var createHandler = require('/root/tool/nodejs/node-v14.20.1-linux-x64/lib/node_modules/github-webhook-handler');
 // secret 保持和 GitHub 后台设置保持一致
-const handler = createHandler({ path: '/', secret: 'dylanlv2022' });
+var handler = createHandler({ path: '/', secret: 'dylanlv2022' });
 
 function run_cmd(cmd, args, callback) {
-  const spawn = require('child_process').spawn;
-  const child = spawn(cmd, args);
-  let resp = '';
+  var spawn = require('child_process').spawn;
+  var child = spawn(cmd, args);
+  var resp = '';
 
   child.stdout.on('data', function(buffer) { resp += buffer.toString(); });
   child.stdout.on('end', function() { callback(resp); });
