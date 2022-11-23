@@ -117,13 +117,27 @@ docker-compose up
 
 
 
-## 七、编写webhook服务
+## 七、安装pm2
 
 安装 github-webhook-handler 和 pm2
 
 ```bash
 npm i github-webhook-handler pm2 -g
 ```
+
+配置软链
+
+```bash
+ln -s /root/tool/nodejs/node-v14.20.1-linux-x64/bin/pm2 /usr/local/bin/
+```
+
+
+
+
+
+## 八、编写webhook服务
+
+
 
 在项目根目录创建 `autobuild` 文件夹
 
@@ -218,14 +232,26 @@ server {
 
 
 
-## 八、启动pm2服务
+## 九、启动pm2服务
 
 ```bash
 # 在此文件夹下：autobuild/ 
-pm2 start webhooks.js -o ./webhooks.log
+pm2 start webhook.js -o ./webhook.log
 ```
 
 
+
+**安装依赖**
+
+在项目根目录下执行命令`cnpm i`
+
+**启动 `docker-compose`**
+
+在 `autobuild` 文件夹下执行命令 `docker-compose up -d`
+
+
+
+访问 `http://xx.xx.xx.xx:81/` 即可
 
 
 
