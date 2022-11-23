@@ -11,12 +11,34 @@ module.exports = defineConfig({
     // 头部导航
     nav: [
       { text: 'Home', link: '/' },
+      { text: '工程化', link: '/engineering/practice/Commitlint配置' },
       { text: 'Part1', link: '/part1/' },
       { text: 'Part2', link: '/part2/' },
       { text: 'Part3', link: '/part3/' },
     ],
     // 多个侧边栏
     sidebar: {
+      '/engineering': [
+        {
+          title: '理论',
+          children: [
+            ['/engineering/theory/pm2简介', 'pm2简介'],
+          ]
+        },
+        {
+          title: '实践',
+          children: [
+            ['/engineering/practice/Commitlint配置', 'DevOps之Commitlint配置'],
+          ]
+        },
+        {
+          title: '服务器',
+          children: [
+            ['/engineering/server/Ubuntu服务器', 'Ubuntu服务器'],
+            ['/engineering/server/腾讯云', '腾讯云']
+          ]
+        }
+      ],
       '/part1/': [
         {
           title: 'part1', // 必要的
