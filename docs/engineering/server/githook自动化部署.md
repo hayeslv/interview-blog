@@ -15,7 +15,7 @@
 ## 二、安装cpm
 
 ```bash
-npm install -g cnpm -registry=https://registry.npm.taobao.org
+npm install -g cnpm@6.10.3 -registry=https://registry.npm.taobao.org
 ```
 
 > 安装完成后输出：/root/tool/nodejs/node-v14.20.1-linux-x64/bin/cnpm -> /root/tool/nodejs/node-v14.20.1-linux-x64/lib/node_modules/cnpm/bin/cnpm
@@ -24,10 +24,19 @@ npm install -g cnpm -registry=https://registry.npm.taobao.org
 
 ```bash
 # node12
-ln -s /root/tool/nodejs/node-v14.20.1-linux-x64/bin/cnpm /usr/local/bin/cnpm
+ln -s /root/tool/nodejs/node-v12.10.0-linux-x64/bin/cnpm /usr/local/bin/cnpm
 # node14
 ln -s /root/tool/nodejs/node-v14.20.1-linux-x64/bin/cnpm /usr/local/bin/cnpm
 ```
+
+npx配置软链
+
+```bash
+ # node12
+ sudo ln -s /root/tool/nodejs/node-v12.10.0-linux-x64/bin/npx /usr/local/bin
+```
+
+
 
 
 
