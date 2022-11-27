@@ -33,7 +33,9 @@ npx配置软链
 
 ```bash
  # node12
- sudo ln -s /root/tool/nodejs/node-v12.10.0-linux-x64/bin/npx /usr/local/bin
+ sudo ln -s /root/tool/nodejs/node-v12.10.0-linux-x64/bin/npx /usr/local/bin 
+ # node 14
+ sudo ln -s /root/tool/nodejs/node-v14.20.1-linux-x64/bin/npx /usr/local/bin
 ```
 
 
