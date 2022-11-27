@@ -1,1 +1,1 @@
-# Hello VuePress succ
+# Hello VuePress
