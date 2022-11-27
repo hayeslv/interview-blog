@@ -15,6 +15,10 @@ function run_cmd(cmd, args, callback) {
 
 http.createServer(function(req, res) {
   console.log('========== 有请求进来了 ==========')
+  // TODO 不知道是不是要更新node版本（目前服务器是node12），先用这段来代替
+  if((req.rawHeaders || []).includes("push")) {
+    run_cmd('sh', ['./webhook.sh'], function(text) { console.log(text); });
+  }
   handler(req, res, function(err) {
     console.log('============= http server handler ==========')
     res.statusCode = 404;

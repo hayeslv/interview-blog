@@ -252,7 +252,41 @@ sudo netplan apply
 
 
 
+## 六、升级Node版本
 
+查看当前 nodejs 的版本
+
+```bash
+node -v
+```
+
+首先下载 n 这个用于更新 node 版本的工具
+
+```bash
+sudo npm install n -g
+```
+
+建立软链
+
+```bash
+ln -s /root/tool/nodejs/node-v12.10.0-linux-x64/bin/n /usr/local/bin/
+```
+
+然后通过 n 这个工具下载 nodejs 的最新稳定版本
+
+```bash
+sudo n stable
+```
+
+> n是一个 Node工具包，它提供了几个升级命令参数：
+>
+> n 显示已安装的Node版本
+> n latest 安装最新版本Node
+> n stable 安装最新稳定版Node
+> n lts 安装最新长期维护版(lts)Node
+> n version 根据提供的版本号安装Node
+
+n模块的默认路径为 ‘/usr/local’
 
 
 
