@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "=======开始======="
 WEB_PATH='/root/project/interview-blog'
-DOCKER_COMPOSE_PATH='/root/project/interview-blog/autobuild'
+DOCKER_COMPOSE_PATH='/root/tool/docker/nginx'
 
 echo "开始执行shell"
 cd $WEB_PATH
