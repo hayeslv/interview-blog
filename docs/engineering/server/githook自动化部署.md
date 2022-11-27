@@ -98,6 +98,8 @@ docker-compose up
 
 首先，需要去 `github` 上配置 `githook`：`git工程 => settings => Webhooks`
 
+> 如果行不通，可以尝试 Content type 选 `application-json`
+
 ![githook](assets/git-hook2.png)
 
 
