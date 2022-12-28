@@ -4446,11 +4446,6 @@
   "resolved" "https://registry.npmmirror.com/es6-promise/-/es6-promise-4.2.8.tgz"
   "version" "4.2.8"
 
-"esbuild-windows-64@0.14.7":
-  "integrity" "sha512-CIGKCFpQOSlYsLMbxt8JjxxvVw9MlF1Rz2ABLVfFyHUF5OeqHD5fPhGrCVNaVrhO8Xrm+yFmtjcZudUGr5/WYQ=="
-  "resolved" "https://registry.npmmirror.com/esbuild-windows-64/-/esbuild-windows-64-0.14.7.tgz"
-  "version" "0.14.7"
-
 "esbuild@>=0.13", "esbuild@0.14.7":
   "integrity" "sha512-+u/msd6iu+HvfysUPkZ9VHm83LImmSNnecYPfFI01pQ7TTcsFR+V0BkybZX7mPtIaI7LCrse6YRj+v3eraJSgw=="
   "resolved" "https://registry.npmmirror.com/esbuild/-/esbuild-0.14.7.tgz"
