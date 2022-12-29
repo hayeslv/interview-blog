@@ -12,9 +12,9 @@ module.exports = defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: '工程化', link: '/engineering/practice/Commitlint配置' },
+      { text: 'JavaScript', link: '/javascript/safe/js安全编码规范' },
       { text: 'Part1', link: '/part1/' },
       { text: 'Part2', link: '/part2/' },
-      { text: 'Part3', link: '/part3/' },
     ],
     // 多个侧边栏
     sidebar: {
@@ -36,6 +36,14 @@ module.exports = defineConfig({
           children: [
             ['/engineering/server/Ubuntu服务器', 'Ubuntu服务器'],
             ['/engineering/server/腾讯云', '腾讯云']
+          ]
+        }
+      ],
+      '/javascript/': [
+        {
+          title: "安全",
+          children: [
+            ['/javascript/safe/js安全编码规范', 'js安全编码规范']
           ]
         }
       ],
