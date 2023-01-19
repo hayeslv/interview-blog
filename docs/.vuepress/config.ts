@@ -34,6 +34,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         link: '/pages/47eed5/'
       },
       {
+        text: 'React',
+        link: '/pages/ff7783/'
+      },
+      {
         text: 'code',
         link: '/pages/f78e5b/'
       },
