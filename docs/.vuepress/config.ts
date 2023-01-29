@@ -38,6 +38,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         link: '/pages/ff7783/'
       },
       {
+        text: '算法',
+        link: '/pages/51c76d/'
+      },
+      {
         text: 'code',
         link: '/pages/f78e5b/'
       },
