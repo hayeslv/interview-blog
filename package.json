@@ -47,5 +47,6 @@
     "cz-conventional-changelog-zh": "^0.0.2",
     "eslint": "^8.28.0",
     "husky": "^8.0.2"
-  }
+  },
+  "dependencies": {}
 }
