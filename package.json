@@ -24,7 +24,15 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@hayeslv/eslint-config": "^0.1.9",
+    "commitizen": "^4.2.5",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-conventional-changelog-zh": "^0.0.2",
     "dayjs": "^1.9.7",
+    "eslint": "^8.28.0",
+    "husky": "^8.0.2",
     "inquirer": "^7.1.0",
     "json2yaml": "^1.1.0",
     "vuepress": "1.9.5",
@@ -38,15 +46,9 @@
     "vuepress-plugin-thirdparty-search": "^1.0.2",
     "vuepress-plugin-zooming": "^1.1.7",
     "vuepress-theme-vdoing": "^1.12.8",
-    "yamljs": "^0.3.0",
-    "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0",
-    "@hayeslv/eslint-config": "^0.1.9",
-    "commitizen": "^4.2.5",
-    "conventional-changelog-cli": "^2.2.2",
-    "cz-conventional-changelog-zh": "^0.0.2",
-    "eslint": "^8.28.0",
-    "husky": "^8.0.2"
+    "yamljs": "^0.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vue-template-compiler": "^2.7.14"
+  }
 }
