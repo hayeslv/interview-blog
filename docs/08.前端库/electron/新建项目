@@ -1,0 +1,142 @@
+### 创建项目
+
+```bash
+vue create electron-vue-test
+```
+
+### 集成 Electron
+
+```bash
+vue add electron-builder
+```
+
+### 运行项目
+
+```bash
+npm run electron:serve
+```
+
+
+
+## electron-edge-js
+
+### 安装
+
+```bash
+npm i -S electron-edge
+```
+
+### 使用
+
+```vue
+<template>
+  <div id="app">
+    <h1>Welcome to Your Vue.js App</h1>
+    <button @click="testEdge">testEdge</button>
+  </div>
+</template>
+
+<script>
+import edge from 'electron-edge-js'
+export default {
+  name: 'App',
+  methods: {
+    testEdge() {
+      const helloWorld = edge.func(function () {/*
+            async (input) => {
+                return ".NET Welcomes " + input.ToString();
+            }
+        */});
+      helloWorld('Electron', (error, value) => {
+        console.log(error, value)
+      })
+    }
+  }
+}
+</script>
+```
+
+### 第一个坑
+
+此时会报第一个错
+
+```bash
+Uncaught ReferenceError: __dirname is not defined
+```
+
+我们需要在根目录创建 `vue.config.js`
+
+```yaml
+module.exports = {
+  pluginOptions: {
+    electronBuilder: {
+      nodeIntegration: true
+    }
+  }
+}
+```
+
+### 第二个坑
+
+第二个报错
+
+```bash
+Uncaught Error: The edge module has not been pre-compiled for Electron version 13.6.2  . You must build a custom version of edge.node. Please refer to https://github.com/agracio/edge-js for building instructions.
+```
+
+我们需要对应配置
+
+```yaml
+module.exports = {
+  pluginOptions: {
+    electronBuilder: {
+      nodeIntegration: true,
+      externals: ['electron-edge-js']
+    }
+  }
+}
+```
+
+### 调用Dll文件
+
+```html
+<button @click="testDll">testDll</button>
+```
+
+```js
+testDll() {
+  const Invoke = edge.func({
+    assemblyFile: 'public/dll/electronedge.dll',
+    typeName: "electronedge.MQ",
+    methodName: "Invoke"
+  })
+  Invoke('Electron', (error, value) => {
+    console.log(error, value)
+  })
+}
+```
+
+
+
+## 32 位 .net
+
+如果执行的 DLL 文件是按照 32 位编译的或者依赖了其他 32 为程序, 那么就需要安装对应 32 为 的 `Electron`
+
+```ini
+npm install --arch=ia32 electron
+```
+
+#### 编译 32 位程序
+
+最后打包程序的时候也要修改为 32 位的
+
+```json
+"script": {
+   "electron:build": "vue-cli-service electron:build --ia32"
+}
+```
+
+
+
+
+
